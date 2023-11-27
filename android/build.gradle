@@ -101,6 +101,17 @@ android {
       } else {
         java.srcDirs += ["src/oldarch"]
       }
+      if (RN_UIMS_OVERSEA_ENABLED()) {
+        java.srcDirs += ["src/oversea/java"]
+        res.srcDirs += ["src/oversea/res"]
+        assets.srcDirs += ["src/oversea/assets"]
+        manifest.srcFile "src/oversea/${supportsNamespace() ? "AndroidManifestNew.xml" : "AndroidManifest.xml"}"
+      } else {
+        java.srcDirs += ["src/domestic/java"]
+        res.srcDirs += ["src/domestic/res"]
+        assets.srcDirs += ["src/domestic/assets"]
+        manifest.srcFile "src/domestic/${supportsNamespace() ? "AndroidManifestNew.xml" : "AndroidManifest.xml"}"
+      }
     }
   }
 }
