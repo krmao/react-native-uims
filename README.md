@@ -14,7 +14,7 @@ yarn add react-native-uims
   ```groovy
   buildscript {
     ext {
-      RN_UIMS_OVERSEA_ENABLED = 'true'
+      RN_UIMS_OVERSEA_ENABLED = 'false'
     }
   }
   ```
