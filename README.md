@@ -5,18 +5,26 @@ user interface monitoring system for react-native
 ## Installation
 
 ```sh
-npm install react-native-uims
+yarn add react-native-uims
 ```
 
-## Usage
+## Config ENV
 
-```js
-import { multiply } from 'react-native-uims';
-
-// ...
-
-const result = await multiply(3, 7);
-```
+- android root build.gradle
+  ```groovy
+  buildscript {
+    ext {
+      RN_UIMS_OVERSEA_ENABLED = 'true'
+    }
+  }
+  ```
+- ios Podfile
+  ```ruby
+  target 'UimsExample' do
+    ENV['RN_UIMS_OVERSEA_ENABLED'] = 'false' # must be set before 'use_native_modules!'
+    config = use_native_modules!
+  end
+  ```
 
 ## Contributing
 

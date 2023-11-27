@@ -18,8 +18,17 @@ def isNewArchitectureEnabled() {
   return rootProject.hasProperty("newArchEnabled") && rootProject.getProperty("newArchEnabled") == "true"
 }
 
+
+def RN_UIMS_OVERSEA_ENABLED() {
+  return rootProject.hasProperty("RN_UIMS_OVERSEA_ENABLED") && rootProject.getProperty("RN_UIMS_OVERSEA_ENABLED") == "true"
+}
+
 apply plugin: "com.android.library"
 apply plugin: "kotlin-android"
+
+println("> [ENV]---------------------------------")
+println("> [ENV] RN_UIMS_OVERSEA_ENABLED : ${RN_UIMS_OVERSEA_ENABLED()}")
+println("> [ENV]---------------------------------")
 
 if (isNewArchitectureEnabled()) {
   apply plugin: "com.facebook.react"

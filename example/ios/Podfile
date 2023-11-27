@@ -26,6 +26,7 @@ if linkage != nil
 end
 
 target 'UimsExample' do
+  ENV['RN_UIMS_OVERSEA_ENABLED'] = 'false' # must be set before 'use_native_modules!'
   config = use_native_modules!
 
   # Flags change depending on the env values.

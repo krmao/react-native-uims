@@ -3,6 +3,19 @@ require "json"
 package = JSON.parse(File.read(File.join(__dir__, "package.json")))
 folly_compiler_flags = '-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -Wno-comma -Wno-shorten-64-to-32'
 
+config = defined?(config) ? config : nil
+RN_UIMS_OVERSEA_ENABLED = ENV['RN_UIMS_OVERSEA_ENABLED'].to_s.downcase == 'true'
+
+# make sure print log once start
+$printed_log = false unless defined?($printed_log)
+unless $printed_log
+  puts "> [ENV]---------------------------------"
+  puts "> [ENV] RN_UIMS_OVERSEA_ENABLED : #{RN_UIMS_OVERSEA_ENABLED}"
+  puts "> [ENV]---------------------------------"
+  $printed_log = true
+end
+# make sure print log once end
+
 Pod::Spec.new do |s|
   s.name         = "react-native-uims"
   s.version      = package["version"]
@@ -37,5 +50,5 @@ Pod::Spec.new do |s|
     s.dependency "RCTTypeSafety"
     s.dependency "ReactCommon/turbomodule/core"
    end
-  end    
+  end
 end
