@@ -105,12 +105,13 @@ android {
         java.srcDirs += ["src/oversea/java"]
         res.srcDirs += ["src/oversea/res"]
         assets.srcDirs += ["src/oversea/assets"]
+        jniLibs.srcDirs += ['libs']
         manifest.srcFile "src/oversea/${supportsNamespace() ? "AndroidManifestNew.xml" : "AndroidManifest.xml"}"
       } else {
         java.srcDirs += ["src/domestic/java"]
         res.srcDirs += ["src/domestic/res"]
         assets.srcDirs += ["src/domestic/assets"]
-        manifest.srcFile "src/domestic/${supportsNamespace() ? "AndroidManifestNew.xml" : "AndroidManifest.xml"}"
+        jniLibs.srcDirs += ['libs']
       }
     }
   }
@@ -129,6 +130,10 @@ dependencies {
   //noinspection GradleDynamicVersion
   implementation "com.facebook.react:react-native:+"
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+  if(!RN_UIMS_OVERSEA_ENABLED()){
+    implementation fileTree(dir: 'libs/analysis/umeng', include: ['*.jar'])
+  }
 }
 
 if (isNewArchitectureEnabled()) {

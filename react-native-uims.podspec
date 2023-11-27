@@ -30,7 +30,8 @@ Pod::Spec.new do |s|
   if RN_UIMS_OVERSEA_ENABLED
     s.source_files = "ios/oversea/**/*.{h,m,mm}"
   else
-    s.source_files = "ios/domestic/**/*.{h,m,mm}"
+    s.source_files = "ios/domestic/analytics/umeng/source/*.{h,m,mm}"
+    s.vendored_frameworks = ['ios/domestic/analytics/umeng/frameworks/*.framework']
   end
 
   # Use install_modules_dependencies helper to install the dependencies if React Native version >=0.71.0.
