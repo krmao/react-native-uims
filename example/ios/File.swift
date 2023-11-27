@@ -1,6 +1,6 @@
 //
 //  File.swift
-//  UimsExample
+//  UIMSExample
 //
 
 import Foundation

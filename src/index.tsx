@@ -9,12 +9,12 @@ const LINKING_ERROR =
 // @ts-expect-error
 const isTurboModuleEnabled = global.__turboModuleProxy != null;
 
-const UimsModule = isTurboModuleEnabled
-  ? require('./NativeUims').default
-  : NativeModules.Uims;
+const UIMSModule = isTurboModuleEnabled
+  ? require('./NativeUIMS').default
+  : NativeModules.UIMS;
 
-const Uims = UimsModule
-  ? UimsModule
+const UIMS = UIMSModule
+  ? UIMSModule
   : new Proxy(
       {},
       {
@@ -25,5 +25,5 @@ const Uims = UimsModule
     );
 
 export function multiply(a: number, b: number): Promise<number> {
-  return Uims.multiply(a, b);
+  return UIMS.multiply(a, b);
 }

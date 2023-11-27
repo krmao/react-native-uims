@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "UimsExample.app"
-               BlueprintName = "UimsExample"
-               ReferencedContainer = "container:UimsExample.xcodeproj">
+               BuildableName = "UIMSExample.app"
+               BlueprintName = "UIMSExample"
+               ReferencedContainer = "container:UIMSExample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "UimsExampleTests.xctest"
-               BlueprintName = "UimsExampleTests"
-               ReferencedContainer = "container:UimsExample.xcodeproj">
+               BuildableName = "UIMSExampleTests.xctest"
+               BlueprintName = "UIMSExampleTests"
+               ReferencedContainer = "container:UIMSExample.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "UimsExample.app"
-            BlueprintName = "UimsExample"
-            ReferencedContainer = "container:UimsExample.xcodeproj">
+            BuildableName = "UIMSExample.app"
+            BlueprintName = "UIMSExample"
+            ReferencedContainer = "container:UIMSExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "UimsExample.app"
-            BlueprintName = "UimsExample"
-            ReferencedContainer = "container:UimsExample.xcodeproj">
+            BuildableName = "UIMSExample.app"
+            BlueprintName = "UIMSExample"
+            ReferencedContainer = "container:UIMSExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

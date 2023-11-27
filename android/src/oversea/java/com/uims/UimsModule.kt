@@ -4,8 +4,8 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.Promise
 
-class UimsModule internal constructor(context: ReactApplicationContext) :
-  UimsSpec(context) {
+class UIMSModule internal constructor(context: ReactApplicationContext) :
+  UIMSSpec(context) {
 
   override fun getName(): String {
     return NAME
@@ -19,6 +19,6 @@ class UimsModule internal constructor(context: ReactApplicationContext) :
   }
 
   companion object {
-    const val NAME = "Uims"
+    const val NAME = "UIMS"
   }
 }

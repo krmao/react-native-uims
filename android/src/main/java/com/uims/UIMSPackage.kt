@@ -7,10 +7,10 @@ import com.facebook.react.module.model.ReactModuleInfoProvider
 import com.facebook.react.module.model.ReactModuleInfo
 import java.util.HashMap
 
-class UimsPackage : TurboReactPackage() {
+class UIMSPackage : TurboReactPackage() {
   override fun getModule(name: String, reactContext: ReactApplicationContext): NativeModule? {
-    return if (name == UimsModule.NAME) {
-      UimsModule(reactContext)
+    return if (name == UIMSModule.NAME) {
+      UIMSModule(reactContext)
     } else {
       null
     }
@@ -20,9 +20,9 @@ class UimsPackage : TurboReactPackage() {
     return ReactModuleInfoProvider {
       val moduleInfos: MutableMap<String, ReactModuleInfo> = HashMap()
       val isTurboModule: Boolean = BuildConfig.IS_NEW_ARCHITECTURE_ENABLED
-      moduleInfos[UimsModule.NAME] = ReactModuleInfo(
-        UimsModule.NAME,
-        UimsModule.NAME,
+      moduleInfos[UIMSModule.NAME] = ReactModuleInfo(
+        UIMSModule.NAME,
+        UIMSModule.NAME,
         false,  // canOverrideExistingModule
         false,  // needsEagerInit
         true,  // hasConstants

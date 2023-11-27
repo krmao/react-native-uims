@@ -20,7 +20,7 @@ yarn add react-native-uims
   ```
 - ios Podfile
   ```ruby
-  target 'UimsExample' do
+  target 'UIMSExample' do
     ENV['RN_UIMS_OVERSEA_ENABLED'] = 'false' # must be set before 'use_native_modules!'
     config = use_native_modules!
   end

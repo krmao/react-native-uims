@@ -1,6 +1,6 @@
-#import "Uims.h"
+#import "UIMS.h"
 
-@implementation Uims
+@implementation UIMS
 RCT_EXPORT_MODULE()
 
 // Example method
@@ -20,7 +20,7 @@ RCT_EXPORT_METHOD(multiply:(double)a
 - (std::shared_ptr<facebook::react::TurboModule>)getTurboModule:
     (const facebook::react::ObjCTurboModule::InitParams &)params
 {
-    return std::make_shared<facebook::react::NativeUimsSpecJSI>(params);
+    return std::make_shared<facebook::react::NativeUIMSSpecJSI>(params);
 }
 #endif
 

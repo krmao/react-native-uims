@@ -160,7 +160,7 @@
     ]
   },
   "codegenConfig": {
-    "name": "RNUimsSpec",
+    "name": "RNUIMSSpec",
     "type": "modules",
     "jsSrcsDir": "src"
   }
